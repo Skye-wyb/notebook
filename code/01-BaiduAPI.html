@@ -1,0 +1,29 @@
+<!-- 注册成为开发者
+在控制台中，创建一个应用，就可以获取到秘钥了。 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>百度地图</title>
+    <script type="text/javascript" src="https://api.map.baidu.com/api?v=1.0&type=webgl&ak=你的应用秘钥"></script>
+    <style type="text/css">  
+        html{height:100%}    
+        body{height:100%;margin:0px;padding:0px}    
+        #container{height:100%}    
+    </style> 
+</head>
+<body>
+    <div id="container"></div>
+    <script type="text/javascript">
+        var map = new BMapGL.Map("container");          // 创建地图实例 
+        var point = new BMapGL.Point(116.566956,39.875176);  // 创建点坐标 
+        map.centerAndZoom(point, 15);                 // 初始化地图，设置中心点坐标和地图级别
+        map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+        // map.setHeading(64.5);   //设置地图旋转角度
+        // map.setTilt(73);       //设置地图的倾斜角度
+        // map.setMapType(BMAP_EARTH_MAP);      // 设置地图类型为地球模式
+    </script>
+</body>
+</html>
